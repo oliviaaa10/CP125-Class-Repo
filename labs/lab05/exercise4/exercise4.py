@@ -1,9 +1,11 @@
 
 def filter_query_times(times):
-    """
-    Remove slow outliers (mean + std deviation) and return sorted times.
-    """
-    pass
+    if not times :
+        return []
+    
+    mean = sum(times) / len(times)
+    
+   
 
 
 # Test
