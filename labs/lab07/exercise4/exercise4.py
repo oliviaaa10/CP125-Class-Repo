@@ -1,6 +1,15 @@
 def apply_upgrade(current, upgrade):
-    # TODO: Your code here
-    pass
+    result = {}
+    for key in current :
+        if key in upgrade :
+            result[key] = max(current[key], upgrade[key])
+        else :
+            result[key] = current[key]
+    for key in upgrade :
+        if key not in current :
+            result[key] = upgrade[key]
+    
+    return result
 
 
 
