@@ -26,5 +26,5 @@ def merge_lists(file1, file2, output_file):
 
 
 # Test your code here
-result = merge_lists("labs/lab08/exercise2/data/list1.txt", "labs/lab08/eercise2/data/list2.txt", "data/merged.txt")
+result = merge_lists("labs/lab08/exercise2/data/list1.txt", "labs/lab08/exercise2/data/list2.txt", "labs/lab08/exercise2/data/merged.txt")
 print(f"Unique names: {result}")
