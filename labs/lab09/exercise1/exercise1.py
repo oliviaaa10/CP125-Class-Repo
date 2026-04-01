@@ -1,5 +1,24 @@
 import pandas as pd
 
-
 def explore_data(filename):
-    pass
+    df = pd.read_csv(filename)
+    total_students = len(df)
+    subjects = ["Math", "Science", "English"]
+
+    math_average = round(df["Math"].mean(), 1)
+
+    highest_math_index = df["Math"].idxmax()
+    highest_math_student = df.loc[highest_math_index, "Name"]
+
+    result = pd.DataFrame([{
+        "total_students" : total_students,
+        "subjects" : subjects,
+        "math_average" : math_average,
+        "highest_math_student" : highest_math_student
+    }])
+
+    return result
+    
+
+result  = explore_data("labs/lab09/data/students.csv")
+print(result)
