@@ -2,4 +2,8 @@ import pandas as pd
 
 
 def critical_inventory(filename):
-    pass
+    df = pd.read_csv(filename)
+
+    
+
+    
